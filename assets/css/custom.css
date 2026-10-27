@@ -32,10 +32,19 @@ body {
   color: var(--brown);
 }
 
-/* 상단 메뉴 호버 밑줄 색상 */
+
+/* 상단 메뉴 글씨 크기 */
+.greedy-nav .visible-links a,
+.greedy-nav .hidden-links a {
+  font-size: 0.85rem;
+}
+
+/* 상단 메뉴 호버 밑줄 */
 .greedy-nav .visible-links a::before {
   background: var(--brown) !important;
+  height: 2px !important;
 }
+
 
 /* 검색 버튼 */
 .greedy-nav .search__toggle {
