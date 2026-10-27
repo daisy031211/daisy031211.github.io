@@ -34,15 +34,15 @@ body {
 
 
 /* 상단 메뉴 글씨 크기 */
-.greedy-nav .visible-links a,
-.greedy-nav .hidden-links a {
-  font-size: 0.85rem;
+.greedy-nav .visible-links > li > a,
+.greedy-nav .hidden-links > li > a {
+  font-size: 14px !important;
 }
 
-/* 상단 메뉴 호버 밑줄 */
-.greedy-nav .visible-links a::before {
-  background: var(--brown) !important;
+/* 상단 메뉴 밑줄 두께 및 색상 */
+.greedy-nav .visible-links > li > a::before {
   height: 2px !important;
+  background: var(--brown) !important;
 }
 
 
