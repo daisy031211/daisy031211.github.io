@@ -33,9 +33,8 @@ body {
 }
 
 /* 상단 메뉴 호버 밑줄 색상 */
-.greedy-nav .visible-links a::before,
-.greedy-nav .hidden-links a::before {
-  background-color: var(--brown) !important;
+.greedy-nav .visible-links a::before {
+  background: var(--brown) !important;
 }
 
 /* 검색 버튼 */
@@ -327,11 +326,5 @@ body,
 .page__content h4 > a.header-link,
 .page__content h5 > a.header-link,
 .page__content h6 > a.header-link {
-  display: none !important;
-}
-
-/* 푸터 RSS Feed 링크 숨기기 */
-.page__footer-follow li:has(> a[href$="/feed.xml"]),
-.page__footer-follow li:has(> a[href$="/feed.xml/"]) {
   display: none !important;
 }

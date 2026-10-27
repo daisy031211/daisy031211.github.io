@@ -21,6 +21,8 @@ description: ""
 github_username: daisy031211
 minimal_mistakes_skin: "air"
 search: true
+atom_feed:
+  hide: true
 
 # Build settings
 markdown: kramdown
