@@ -331,7 +331,12 @@ body,
   font-size: 0.8rem;
 }
 
-/* 본문 소제목 옆 앵커 링크 제거 */
-.page__content .header-link {
+/* 본문 소제목의 앵커 링크 제거 */
+.page__content h1 > a.header-link,
+.page__content h2 > a.header-link,
+.page__content h3 > a.header-link,
+.page__content h4 > a.header-link,
+.page__content h5 > a.header-link,
+.page__content h6 > a.header-link {
   display: none !important;
 }
