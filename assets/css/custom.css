@@ -196,31 +196,53 @@ body,
 
 
 /* Daisy Profile - Mobile */
-
-/* 모바일에서 Follow 버튼 숨기기 */
 @media (max-width: 767px) {
-  .author__urls-wrapper button {
+
+  /* Follow 버튼 제거 */
+  .sidebar .author__urls-wrapper > button {
     display: none !important;
   }
 
-  /* SNS 링크 항상 표시 */
-  .author__urls {
+  /* SNS 목록을 일반 영역으로 배치 */
+  .sidebar .author__urls-wrapper {
+    display: block !important;
+    position: static !important;
+    margin-top: 6px !important;
+  }
+
+  /* Discord, GitHub, Instagram, Email 항상 표시 */
+  .sidebar .author__urls {
     display: block !important;
     position: static !important;
     visibility: visible !important;
     opacity: 1 !important;
-    margin-top: 6px !important;
+    width: 100% !important;
+    margin: 0 !important;
     padding: 0 !important;
-    border: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
     background: transparent !important;
   }
 
-  /* 프로필과 본문 사이 간격 */
+  /* PC 프로필처럼 세로 목록으로 표시 */
+  .sidebar .author__urls li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sidebar .author__urls li a {
+    display: inline-block;
+    padding: 4px 0 !important;
+  }
+
+  /* 프로필과 게시글 사이 간격 */
   .sidebar {
     margin-bottom: 16px !important;
   }
 }
+
 
 
 /* Daisy Blog - Post Detail */
@@ -307,4 +329,9 @@ body,
 .archive .grid__item .page__date {
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+/* 본문 소제목 옆 앵커 링크 제거 */
+.page__content .header-link {
+  display: none !important;
 }
