@@ -41,8 +41,8 @@ body {
 
 /* 상단 메뉴 호버 밑줄 */
 .greedy-nav .visible-links > li > a::before {
-  background: var(--brown) !important;
-  height: 2px !important;
+  background: var(--beige) !important;
+  height: 1px !important;
 }
 
 
