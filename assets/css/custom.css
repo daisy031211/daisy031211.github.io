@@ -32,6 +32,12 @@ body {
   color: var(--brown);
 }
 
+/* 상단 메뉴 호버 밑줄 색상 */
+.greedy-nav .visible-links a::before,
+.greedy-nav .hidden-links a::before {
+  background-color: var(--brown) !important;
+}
+
 /* 검색 버튼 */
 .greedy-nav .search__toggle {
   color: var(--brown) !important;
@@ -325,6 +331,7 @@ body,
 }
 
 /* 푸터 RSS Feed 링크 숨기기 */
-.page__footer-follow .feed-subscribe {
+.page__footer-follow li:has(> a[href$="/feed.xml"]),
+.page__footer-follow li:has(> a[href$="/feed.xml/"]) {
   display: none !important;
 }
