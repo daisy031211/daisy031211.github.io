@@ -193,3 +193,118 @@ body,
 .sidebar .h-card {
   margin-bottom: 0 !important;
 }
+
+
+/* Daisy Profile - Mobile */
+
+/* 모바일에서 Follow 버튼 숨기기 */
+@media (max-width: 767px) {
+  .author__urls-wrapper button {
+    display: none !important;
+  }
+
+  /* SNS 링크 항상 표시 */
+  .author__urls {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 6px !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  /* 프로필과 본문 사이 간격 */
+  .sidebar {
+    margin-bottom: 16px !important;
+  }
+}
+
+
+/* Daisy Blog - Post Detail */
+
+/* 게시글 제목 */
+.page__title {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+/* 게시글 본문 */
+.page__content {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  overflow-wrap: break-word;
+}
+
+/* 본문 소제목 */
+.page__content h2 {
+  font-size: 1.35rem;
+  margin-top: 2.4em;
+  margin-bottom: 0.9em;
+}
+
+.page__content h3 {
+  font-size: 1.15rem;
+  margin-top: 1.9em;
+  margin-bottom: 0.7em;
+}
+
+/* 문단과 목록 간격 */
+.page__content p,
+.page__content ul,
+.page__content ol {
+  margin-bottom: 1.2em;
+}
+
+/* 코드 블록 */
+.page__content div.highlighter-rouge,
+.page__content figure.highlight {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5em 0;
+}
+
+/* 코드 글씨 */
+.page__content pre,
+.page__content code {
+  font-size: 0.85rem;
+}
+
+/* 모바일 게시글 */
+@media (max-width: 767px) {
+  .page__title {
+    font-size: 1.5rem;
+  }
+
+  .page__content {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+}
+
+/* Daisy Blog - Post Card Typography */
+
+/* 카드 제목 */
+.archive .grid__item .archive__item-title {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+/* 카드 설명 */
+.archive .grid__item .archive__item-excerpt {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* 카드 날짜 */
+.archive .grid__item .page__date {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
