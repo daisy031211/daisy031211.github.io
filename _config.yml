@@ -75,12 +75,18 @@ author:
 
 footer:
   links:
+    - label: "Discord"
+      icon: "fab fa-discord"
+      url: "https://discord.com/users/daisy1211._."
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/daisy031211"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/1211.won/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:lucy03121126@gmail.com"
 
 defaults:
   # _posts

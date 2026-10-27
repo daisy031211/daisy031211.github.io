@@ -197,52 +197,16 @@ body,
 
 /* Daisy Profile - Mobile */
 @media (max-width: 767px) {
-
-  /* Follow 버튼 제거 */
-  .sidebar .author__urls-wrapper > button {
+  /* Follow 버튼 및 SNS 목록 제거 */
+  .sidebar .author__urls-wrapper {
     display: none !important;
   }
 
-  /* SNS 목록을 일반 영역으로 배치 */
-  .sidebar .author__urls-wrapper {
-    display: block !important;
-    position: static !important;
-    margin-top: 6px !important;
-  }
-
-  /* Discord, GitHub, Instagram, Email 항상 표시 */
-  .sidebar .author__urls {
-    display: block !important;
-    position: static !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
-
-  /* PC 프로필처럼 세로 목록으로 표시 */
-  .sidebar .author__urls li {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .sidebar .author__urls li a {
-    display: inline-block;
-    padding: 4px 0 !important;
-  }
-
-  /* 프로필과 게시글 사이 간격 */
+  /* 프로필 아래 여백 정리 */
   .sidebar {
     margin-bottom: 16px !important;
   }
 }
-
 
 
 /* Daisy Blog - Post Detail */
