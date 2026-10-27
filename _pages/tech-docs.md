@@ -5,8 +5,6 @@ permalink: /tech-docs/
 author_profile: true
 ---
 
-보안 및 개발 관련 개념과 기술 문서를 정리하는 공간입니다.
-
 {% assign category_posts = site.posts | where_exp: "post", "post.categories contains 'tech-docs'" %}
 
 <div class="entries-grid">
