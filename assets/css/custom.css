@@ -16,6 +16,7 @@ body {
   color: var(--brown);
 }
 
+
 /* 상단 메뉴 */
 .masthead {
   background: var(--ivory);
@@ -30,6 +31,24 @@ body {
 .site-title {
   color: var(--brown);
 }
+
+/* 검색 버튼 */
+.greedy-nav .search__toggle {
+  color: var(--brown) !important;
+}
+
+/* 모바일 햄버거 메뉴 버튼 */
+.greedy-nav .greedy-nav__toggle {
+  color: var(--brown) !important;
+}
+
+/* 햄버거 메뉴의 세 줄 */
+.greedy-nav .navicon,
+.greedy-nav .navicon::before,
+.greedy-nav .navicon::after {
+  background-color: var(--brown) !important;
+}
+
 
 /* 링크 */
 a,
@@ -302,5 +321,10 @@ body,
 .page__content h4 > a.header-link,
 .page__content h5 > a.header-link,
 .page__content h6 > a.header-link {
+  display: none !important;
+}
+
+/* 푸터 RSS Feed 링크 숨기기 */
+.page__footer-follow .feed-subscribe {
   display: none !important;
 }
