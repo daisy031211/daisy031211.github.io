@@ -39,10 +39,10 @@ body {
   font-size: 14px !important;
 }
 
-/* 상단 메뉴 밑줄 두께 및 색상 */
+/* 상단 메뉴 호버 밑줄 */
 .greedy-nav .visible-links > li > a::before {
-  height: 2px !important;
   background: var(--brown) !important;
+  height: 2px !important;
 }
 
 
