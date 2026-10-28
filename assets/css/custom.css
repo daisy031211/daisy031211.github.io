@@ -337,3 +337,30 @@ body,
 .page__content h6 > a.header-link {
   display: none !important;
 }
+
+/* =========================================
+   카테고리 페이지 콘텐츠 여백
+   ========================================= */
+
+.layout--archive .archive {
+  padding-top: 28px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 48px;
+}
+
+/* 카테고리 제목과 게시글 사이 간격 */
+.layout--archive .archive__subtitle,
+.layout--archive .page__title {
+  margin-bottom: 28px;
+}
+
+/* 모바일 화면에서는 여백 축소 */
+@media (max-width: 767px) {
+  .layout--archive .archive {
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 32px;
+  }
+}
