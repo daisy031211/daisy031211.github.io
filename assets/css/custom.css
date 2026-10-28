@@ -725,3 +725,28 @@ body.layout--single .page__title {
     margin-bottom: 10px;
   }
 }
+
+
+/* =========================================
+   Daisy Blog - Hide Duplicate Post Metadata
+   ========================================= */
+
+/* 제목 아래 기존 작성 날짜 숨기기 */
+body.layout--single article.page .page__meta {
+  display: none !important;
+}
+
+/* 게시글 하단 카테고리와 태그 숨기기 */
+body.layout--single article.page .page__taxonomy {
+  display: none !important;
+}
+
+/* 게시글 하단 Updated 날짜 숨기기 */
+body.layout--single article.page .page__date {
+  display: none !important;
+}
+
+/* 제목 위에 새로 추가한 날짜는 유지 */
+body.layout--single .daisy-post-meta time {
+  display: inline !important;
+}
