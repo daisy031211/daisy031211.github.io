@@ -657,3 +657,77 @@ body.layout--single article.page .page__content code {
     font-size: 14px !important;
   }
 }
+
+
+/* =========================================
+   Daisy Blog - Search Results Layout Fix
+   ========================================= */
+
+/* 검색 결과 전체를 세로 방향으로 배치 */
+body.layout--search .archive,
+body.layout--search #main > .archive {
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+}
+
+/* 검색 결과 카드 영역 */
+body.layout--search .entries-grid,
+body.layout--search .entries-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin-top: 20px !important;
+}
+
+/* 카드 너비 */
+body.layout--search .grid__item {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  float: none !important;
+  clear: none !important;
+}
+
+/* 카드 디자인 */
+body.layout--search .archive__item {
+  padding: 18px !important;
+  border-radius: 12px !important;
+  height: 100%;
+}
+
+/* 카드 제목 */
+body.layout--search .archive__item-title {
+  font-size: 17px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 10px !important;
+}
+
+/* 카드 설명 */
+body.layout--search .archive__item-excerpt {
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  color: #85776B !important;
+}
+
+/* 카드 이미지 */
+body.layout--search .archive__item-teaser {
+  width: 100% !important;
+  margin-bottom: 12px !important;
+}
+
+body.layout--search .archive__item-teaser img {
+  width: 100% !important;
+  height: 170px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
+
+/* 모바일 검색 결과는 1열 */
+@media (max-width: 767px) {
+  body.layout--search .entries-grid,
+  body.layout--search .entries-list {
+    grid-template-columns: 1fr !important;
+  }
+}
