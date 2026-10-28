@@ -364,3 +364,48 @@ body,
     padding-bottom: 32px;
   }
 }
+
+
+/* =========================================
+   Daisy Blog - Post Content Card
+   게시글 상세 페이지 카드 디자인
+   ========================================= */
+
+/* 게시글 전체 카드 */
+.layout--single .page__inner-wrap {
+  background: var(--ivory);
+  border: 1px solid var(--cream);
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-sizing: border-box;
+}
+
+/* 게시글 제목 */
+.layout--single .page__title {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* 제목과 본문 사이 간격 */
+.layout--single .page__content {
+  margin-top: 28px;
+}
+
+/* 카드 안 이미지가 튀어나오지 않도록 */
+.layout--single .page__content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 모바일 카드 디자인 */
+@media (max-width: 767px) {
+  .layout--single .page__inner-wrap {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .layout--single .page__content {
+    margin-top: 22px;
+  }
+}
