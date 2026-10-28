@@ -670,3 +670,58 @@ body.layout--single article.page .page__content code {
     padding: 16px !important;
   }
 }
+
+
+/* =========================================
+   Daisy Blog - Post Category & Date
+   ========================================= */
+
+/* 게시글 제목 위 메타 정보 */
+body.layout--single .daisy-post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* 숨김 상태 유지 */
+body.layout--single .daisy-post-meta[hidden] {
+  display: none !important;
+}
+
+/* 아이콘과 글자 정렬 */
+body.layout--single .daisy-post-meta__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+body.layout--single .daisy-post-meta__item i {
+  color: var(--beige);
+  font-size: 12px;
+}
+
+/* 기존 제목 아래 영어 날짜 숨김 */
+body.layout--single article.page
+.page__inner-wrap > header .page__date {
+  display: none !important;
+}
+
+/* 제목 위쪽 간격 */
+body.layout--single .page__title {
+  margin-top: 0 !important;
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  body.layout--single .daisy-post-meta {
+    font-size: 12px;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+}

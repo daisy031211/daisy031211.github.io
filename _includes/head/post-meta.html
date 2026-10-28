@@ -1,0 +1,39 @@
+
+{% if page.collection == "posts" %}
+  {% assign category_slug = page.categories | first %}
+
+  {% case category_slug %}
+    {% when "development" %}
+      {% assign category_name = "개발" %}
+    {% when "ctf-wargame" %}
+      {% assign category_name = "CTF/Wargame" %}
+    {% when "bug-bounty" %}
+      {% assign category_name = "Bug Bounty" %}
+    {% when "tech-docs" %}
+      {% assign category_name = "블로그/기술문서" %}
+    {% when "research" %}
+      {% assign category_name = "논문/컨퍼런스" %}
+    {% when "activities" %}
+      {% assign category_name = "공모전/자격증" %}
+    {% else %}
+      {% assign category_name = category_slug %}
+  {% endcase %}
+
+  <div id="daisy-post-meta" class="daisy-post-meta" hidden>
+    {% if category_slug %}
+      <span class="daisy-post-meta__item">
+        <i class="fas fa-folder" aria-hidden="true"></i>
+        <span>{{ category_name | escape }}</span>
+      </span>
+    {% endif %}
+
+    {% if page.date %}
+      <span class="daisy-post-meta__item">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+          {{ page.date | date: "%Y.%m.%d" }}
+        </time>
+      </span>
+    {% endif %}
+  </div>
+{% endif %}

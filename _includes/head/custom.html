@@ -1,2 +1,19 @@
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <script defer src="{{ '/assets/js/mobile-menu.js' | relative_url }}"></script>
+
+
+{% include post-meta.html %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const meta = document.getElementById("daisy-post-meta");
+  const title = document.querySelector(
+    "body.layout--single article.page .page__title"
+  );
+
+  if (!meta || !title) return;
+
+  title.parentNode.insertBefore(meta, title);
+  meta.hidden = false;
+});
+</script>
