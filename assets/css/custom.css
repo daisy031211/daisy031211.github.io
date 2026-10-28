@@ -458,17 +458,35 @@ body.layout--single .page__content h3 {
 }
 
 /* =========================================
-   Daisy Blog - PC Post Layout
+   Daisy Blog - Desktop Post Layout Fix
    ========================================= */
 
 @media (min-width: 1024px) {
 
-  /* 프로필 옆 게시글 영역 */
-  body.layout--single #main article.page {
-    width: calc(100% - 260px) !important;
-    float: right !important;
-    padding-right: 0 !important;
-    box-sizing: border-box;
+  /* 프로필과 게시글을 가로로 배치 */
+  body.layout--single #main {
+    display: grid !important;
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 48px;
+    align-items: start;
+  }
+
+  /* 왼쪽 프로필 */
+  body.layout--single #main > .sidebar {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    grid-column: 1;
+  }
+
+  /* 오른쪽 게시글 */
+  body.layout--single #main > article.page {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-column: 2;
+    min-width: 0;
   }
 
   /* 게시글 카드 */
@@ -477,5 +495,4 @@ body.layout--single .page__content h3 {
     max-width: none !important;
     padding: 36px 42px !important;
   }
-
 }
