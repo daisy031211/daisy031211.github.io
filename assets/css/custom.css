@@ -458,45 +458,45 @@ body.layout--single .page__content h3 {
 }
 
 /* =========================================
-   Daisy Blog - Desktop Layout Final
+   Daisy Blog - Desktop Post Layout
    ========================================= */
 
 @media (min-width: 1024px) {
 
-  /* 전체 레이아웃 */
+  /* 프로필 + 게시글 가로 정렬 */
   body.layout--single #main {
-    display: grid !important;
-    grid-template-columns: 240px minmax(0, 1fr) !important;
-    column-gap: 48px !important;
-    align-items: start !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 48px !important;
   }
 
-  /* 테마의 clearfix가 그리드 공간을 차지하지 않도록 */
+  /* 테마의 가상 요소 제거 */
   body.layout--single #main::before,
   body.layout--single #main::after {
     display: none !important;
     content: none !important;
   }
 
-  /* 프로필 */
+  /* 왼쪽 프로필 */
   body.layout--single #main > .sidebar {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    width: 100% !important;
+    flex: 0 0 240px !important;
+    width: 240px !important;
     float: none !important;
+    clear: none !important;
     margin: 0 !important;
   }
 
-  /* 게시글 */
+  /* 오른쪽 게시글 */
   body.layout--single #main > article.page {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    width: 100% !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
     max-width: none !important;
+    min-width: 0 !important;
     float: none !important;
+    clear: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    min-width: 0 !important;
   }
 
   /* 게시글 카드 */
