@@ -409,3 +409,59 @@ article.page .page__inner-wrap {
     margin-top: 22px;
   }
 }
+
+
+/* =========================================
+   게시글 너비 및 글씨 크기 조정
+   ========================================= */
+
+/* PC 게시글 영역 넓히기 */
+@media (min-width: 1024px) {
+  body.layout--single #main article.page {
+    width: calc(100% - 300px) !important;
+    padding-right: 0 !important;
+    float: right;
+  }
+}
+
+/* 카드 내부 여백 */
+body.layout--single article.page .page__inner-wrap {
+  padding: 32px 36px !important;
+}
+
+/* 게시글 제목 크기 */
+body.layout--single .page__title {
+  font-size: 1.55rem !important;
+  line-height: 1.4;
+}
+
+/* 본문 글씨 */
+body.layout--single .page__content {
+  font-size: 0.85rem !important;
+  line-height: 1.8;
+}
+
+/* 본문 큰 소제목 */
+body.layout--single .page__content h2 {
+  font-size: 1.2rem !important;
+}
+
+/* 본문 작은 소제목 */
+body.layout--single .page__content h3 {
+  font-size: 1.05rem !important;
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  body.layout--single article.page .page__inner-wrap {
+    padding: 22px 18px !important;
+  }
+
+  body.layout--single .page__title {
+    font-size: 1.35rem !important;
+  }
+
+  body.layout--single .page__content {
+    font-size: 0.9rem !important;
+  }
+}
