@@ -506,3 +506,154 @@ body.layout--single .page__content h3 {
     padding: 36px 42px !important;
   }
 }
+
+
+/* =========================================
+   Daisy Blog - Search Result Cards
+   ========================================= */
+
+/* 검색 결과 전체 영역 */
+.search-content__inner-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 검색 결과 목록: 2열 카드 */
+.search-content .results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+/* 개별 검색 결과 카드 */
+.search-content .list__item {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  background: var(--ivory);
+  border: 1px solid var(--cream);
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.search-content .list__item:hover {
+  transform: translateY(-3px);
+}
+
+/* 검색 결과 제목 */
+.search-content .archive__item-title {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.search-content .archive__item-title a {
+  color: var(--brown);
+}
+
+/* 검색 결과 이미지 */
+.search-content .archive__item-teaser {
+  margin-bottom: 12px;
+}
+
+.search-content .archive__item-teaser img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 검색 결과 설명 */
+.search-content .archive__item-excerpt {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* 모바일에서는 1열 */
+@media (max-width: 767px) {
+  .search-content .results {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .search-content .list__item {
+    padding: 16px;
+  }
+}
+
+
+/* =========================================
+   Daisy Blog - Post Typography Final
+   ========================================= */
+
+/* 게시글 제목 */
+body.layout--single article.page .page__title {
+  font-size: 28px !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.02em;
+}
+
+/* 게시글 작성 날짜 */
+body.layout--single article.page .page__date,
+body.layout--single article.page .page__meta {
+  font-size: 13px !important;
+}
+
+/* 게시글 본문 전체 */
+body.layout--single article.page .page__content {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+}
+
+/* 1. 실습 목적 / 2. 실습 환경 */
+body.layout--single article.page .page__content h2 {
+  font-size: 22px !important;
+  line-height: 1.5 !important;
+}
+
+/* 3.1 C 프로그램 컴파일 등 */
+body.layout--single article.page .page__content h3 {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
+
+/* 본문 문단과 목록 */
+body.layout--single article.page .page__content p,
+body.layout--single article.page .page__content li {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+}
+
+/* 코드 블록 */
+body.layout--single article.page .page__content pre,
+body.layout--single article.page .page__content code {
+  font-size: 13px !important;
+}
+
+/* 모바일 글씨 크기 */
+@media (max-width: 767px) {
+  body.layout--single article.page .page__title {
+    font-size: 23px !important;
+  }
+
+  body.layout--single article.page .page__content {
+    font-size: 14px !important;
+  }
+
+  body.layout--single article.page .page__content h2 {
+    font-size: 20px !important;
+  }
+
+  body.layout--single article.page .page__content h3 {
+    font-size: 17px !important;
+  }
+
+  body.layout--single article.page .page__content p,
+  body.layout--single article.page .page__content li {
+    font-size: 14px !important;
+  }
+}
