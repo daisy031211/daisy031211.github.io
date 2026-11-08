@@ -49,4 +49,6 @@ Jekyll 기반의 **Minimal Mistakes** 템플릿을 적용한 뒤 자기소개, �
 
 ## 3. 산출물
 
+![Daisy 블로그 메인 화면](/assets/images/blog-main.png)
+
 **GitHub Pages 블로그:** https://daisy031211.github.io/
