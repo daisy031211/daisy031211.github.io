@@ -3,8 +3,6 @@ title: "GitHub Pages를 활용해 나만의 블로그 만들기"
 date: 2026-11-08
 categories:
   - development
-header:
-  teaser: /assets/images/blog-main.png
 ---
 
 # [개발] GitHub Pages(github.io)를 활용해 나만의 블로그 만들기
