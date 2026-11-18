@@ -10,7 +10,20 @@ tags:
   - Fuzzing
 ---
 
-### 연구 배경과 문제 의식
+# [논문/컨퍼런스] 관심분야 논문 리뷰하기
+
+## 리뷰 대상 논문
+
+**논문명** : Pig in a Poke: Automatically Detecting and Exploiting Link Following Vulnerabilities in Windows File Operations
+
+**저자** : Bocheng Xiang 외
+
+**학회** : USENIX Security Symposium 2025
+
+**논문 링크** : https://www.usenix.org/conference/usenixsecurity25/presentation/xiang-bocheng
+
+
+## 1. 연구 배경과 문제 의식
 
 본 논문은 Windows 환경에서 발생하는 링크 추종 취약점(LFVuln)의 자동 탐지와 악용 문제를 다룬다.
 
@@ -25,17 +38,17 @@ tags:
 이러한 한계점들을 해결하기 위해 저자들은 LFVuln의 탐지와 악용을 자동화하는 LinkZard를 제안했다.
 
 
-### LinkZard의 핵심 아이디어와 동작 방식
+## 2. LinkZard의 핵심 아이디어와 동작 방식
 
 LinkZard는 탐색 단계와 악용 단계 두 단계로 구성되어 있다.
 
-- 탐색 단계(Exploration Phase)
+### 탐색 단계(Exploration Phase)
 
 프로그램은 파일 이름, 크기, 내용 등 조건에 따라 다른 작업을 수행할 수 있다. 이러한 조건을 File State Constraint라고 한다. 예를 들어, 특정 크기 이상의 파일에서만 백업 작업이 실행된다면 조건을 만족하지 못하는 파일로는 해당 작업까지 도달할 수 없다.
 
 LinkZard는 이러한 문제를 해결하기 위해 File State Fuzzing을 활용하여 파일의 이름, 크기 등 다양한 상태를 변경해가며 프로그램이 수행하는 파일 작업을 관찰하고 취약한 동작까지 탐색한다.
 
-- 악용 단계(Exploitation Phase)
+### 악용 단계(Exploitation Phase)
 
 먼저 Exploration Phase에서 수집한 파일 작업을 가지고 파일 작업과 작업 간의 순서 관계를 표현하는 방향 그래프인 FOPG(File Operation Primitive Graph)로 구조화한다.
 
@@ -46,7 +59,7 @@ Pre-sink와 On-sink 제약 조건 유형에 따라 코드 래핑(Code Wrapping) 
 이러한 과정을 통해 LinkZard는 취약한 파일 작업을 탐색하는 것뿐 아니라 악용 코드를 조립하고 실행하여 실제 악용 가능성까지 자동으로 검증한다.
 
 
-### 실험 결과 및 한계점
+## 3. 실험 결과 및 한계점
 
 LinkZard의 성능을 검증하기 위해 연구진은 먼저 기존에 알려진 LFVuln 42개를 재현한 데이터셋을 구성하고, 기존 탐지 도구인 Jerry를 확장한 Jerry-Ext와 비교 실험을 진행하였다. 
 
@@ -77,7 +90,7 @@ LinkZard는 이러한 성과를 보여주었지만, 몇 가지 한계도 존재�
 3. Windows 환경에 특화된 구현 : LinkZard의 핵심 아이디어는 다른 운영체제에도 적용할 수 있지만, 현재 구현은 Windows 환경에 특화되어 있어 Linux나 macOS로 확장하려면 운영체제별 구현과 검증이 필요하다.
 
 
-### 배운 점과 향후 확장 방향
+## 4. 배운 점과 향후 확장 방향
 
 이번 논문에서 가장 인상 깊었던 부분은 논문의 전체적인 연구 흐름이었다. LFVuln의 위험성을 설명하는 것에서 시작하여 기존 연구의 한계를 분석하고 해결하기 위한 방법을 설계한 뒤 실험을 통해 각 기능의 효과를 검증하는 과정이 논리적으로 연결되어 있었다. 특히 File State Fuzzing을 제거했을 때 미탐이 증가하고 Sink 분석 방식을 변경했을 때 오탐이 증가하는 결과를 통해 각 기능의 필요성을 확인할 수 있었다.
 
