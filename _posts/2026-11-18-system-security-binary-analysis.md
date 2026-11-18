@@ -1,10 +1,17 @@
 ---
-layout: post
-title: "[블로그/기술문서] 시스템 보안 및 바이너리 분석 개인 학습 기록"
+title: "시스템 보안 및 바이너리 분석 개인 학습 기록 (LAB 01~03)"
 date: 2026-11-18
-categories: [tech-docs]
-tags: [System Security, Binary Analysis, IDA, GDB, Pwndbg, Buffer Overflow]
+categories:
+  - tech-docs
+tags:
+  - System Security
+  - Binary Analysis
+  - IDA
+  - GDB
+  - Pwndbg
+  - Buffer Overflow
 ---
+
 
 # [블로그/기술문서] 시스템 보안 및 바이너리 분석 개인 학습 기록
 
