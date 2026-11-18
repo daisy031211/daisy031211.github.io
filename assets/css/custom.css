@@ -746,6 +746,65 @@ body.layout--single article.page .page__date {
   display: none !important;
 }
 
+
+/* =========================================
+   Daisy Blog - Paper Review Tables
+   ========================================= */
+
+body.layout--single .page__content table {
+  display: table !important;
+  width: 100% !important;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  background: var(--ivory);
+  border: 1px solid var(--cream);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+/* 표 제목 */
+body.layout--single .page__content table thead th {
+  background: var(--cream) !important;
+  color: var(--brown) !important;
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 16px;
+  border: none;
+  border-bottom: 1px solid var(--beige);
+}
+
+/* 표 내용 */
+body.layout--single .page__content table tbody td {
+  background: var(--ivory) !important;
+  color: var(--brown);
+  padding: 13px 16px;
+  border: none;
+  border-bottom: 1px solid var(--cream);
+}
+
+/* 마지막 줄 테두리 제거 */
+body.layout--single .page__content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 마우스 올렸을 때 */
+body.layout--single .page__content table tbody tr:hover td {
+  background: var(--vanilla) !important;
+}
+
+/* 모바일에서 가로 스크롤 */
+@media (max-width: 767px) {
+  body.layout--single .page__content table {
+    display: block !important;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
 /* 제목 위에 새로 추가한 날짜는 유지 */
 body.layout--single .daisy-post-meta time {
   display: inline !important;
