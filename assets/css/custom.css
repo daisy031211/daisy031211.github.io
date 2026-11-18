@@ -795,12 +795,33 @@ body.layout--single .page__content table tbody tr:hover td {
   background: var(--vanilla) !important;
 }
 
-/* 모바일에서 가로 스크롤 */
+
+/* =========================================
+   Daisy Blog - Responsive Tables
+   ========================================= */
+
+body.layout--single .page__content table {
+  display: table !important;
+  width: 100% !important;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* 모바일 표 */
 @media (max-width: 767px) {
   body.layout--single .page__content table {
-    display: block !important;
-    overflow-x: auto;
-    white-space: nowrap;
+    width: 100% !important;
+    font-size: 12px !important;
+  }
+
+  body.layout--single .page__content table th,
+  body.layout--single .page__content table td {
+    padding: 10px 7px !important;
+    font-size: 12px !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
   }
 }
 
