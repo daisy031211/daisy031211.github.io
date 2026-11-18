@@ -6,6 +6,8 @@ categories: [tech-docs]
 tags: [System Security, Binary Analysis, IDA, GDB, Pwndbg, Buffer Overflow]
 ---
 
+# [블로그/기술문서] 시스템 보안 및 바이너리 분석 개인 학습 기록
+
 ## 1. 학습 개요
 
 시스템 보안과 바이너리 분석에 대한 이해를 높이기 위해 개인적으로 실습을 계획하고 진행하였다. 먼저 분석 도구의 사용법을 익히고, 소스코드가 있는 프로그램에서 취약점의 원리를 확인한 뒤, 소스코드가 제공되지 않은 실행 파일을 분석하는 순서로 학습하였다.
