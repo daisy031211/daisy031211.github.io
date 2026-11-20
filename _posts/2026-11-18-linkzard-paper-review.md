@@ -22,6 +22,8 @@ tags:
 
 **논문 링크** : https://www.usenix.org/conference/usenixsecurity25/presentation/xiang-bocheng
 
+취약점 분석에 관심이 있어 관련 논문을 찾아보던 중 LinkZard를 알게 되었다. 취약점이 발생하는 과정과 기존 접근 방식의 문제점을 살펴보고 이를 도구를 통해 해결하고자 한다는 점이 흥미로워 해당 논문을 선정하였다.
+
 
 ## 1. 연구 배경과 문제 의식
 
