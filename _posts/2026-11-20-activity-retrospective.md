@@ -2,8 +2,8 @@
 title: "[블로그/기술문서/리서치] 지금까지의 활동 정리 및 회고"
 date: 2026-11-20
 categories:
-  - activities
-permalink: /activities/activity-retrospective/
+  - tech-docs
+permalink: /tech-docs/activity-retrospective/
 toc: true
 toc_sticky: true
 ---
