@@ -4,8 +4,6 @@ date: 2026-11-20
 categories:
   - tech-docs
 permalink: /tech-docs/activity-retrospective/
-toc: true
-toc_sticky: true
 ---
 
 # [블로그/기술문서/리서치] 지금까지의 활동 정리 및 회고
