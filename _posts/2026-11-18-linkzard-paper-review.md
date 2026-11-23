@@ -58,7 +58,7 @@ LinkZard는 이러한 조건 때문에 놓칠 수 있는 파일 작업을 발견
 
 관리자 권한 프로그램이 파일을 확인한 뒤 열어서 수정하는 과정에서 공격자가 파일 확인과 열기 사이에 경로를 심볼릭 링크로 변경할 수 있다면 프로그램이 의도하지 않은 시스템 파일을 수정할 가능성이 있다.
 
-![정상적인 파일 처리와 링크 추종 공격 비교](/assets/images/linkzard/linkzard-link-following.png)
+![정상적인 파일 처리와 링크 추종 공격 비교](/assets/images/linkzard-link-following.png)
 
 이처럼 링크 추종 취약점은 개별 파일 작업뿐 아니라 **작업이 실행되는 순서**에 따라서도 발생할 수 있다.
 
@@ -68,7 +68,7 @@ LinkZard는 이러한 조건 때문에 놓칠 수 있는 파일 작업을 발견
 
 **Sink**는 링크 추종 취약점으로 이어질 수 있는 **위험한 파일 작업 지점**을 의미한다. 모든 파일 작업이 취약점으로 이어지는 것은 아니므로 Sink 분석을 통해 실제로 검증할 가치가 있는 취약점 후보를 선별한다.
 
-![FOPG와 Sink 패턴 매칭 과정](/assets/images/linkzard/linkzard-fopg-sink.png)
+![FOPG와 Sink 패턴 매칭 과정](/assets/images/linkzard-fopg-sink.png)
 
 FOPG가 파일 작업의 흐름을 정리하는 과정이라면 SInk 분석은 그 중 위험한 작업을 찾아내는 과정이다.
 
@@ -83,7 +83,7 @@ On-sink 유형에서는 작업 도중 개입할 시간을 확보하기 위해 Wi
 
 Pre-sink 유형에서는 필요한 파일 상태를 미리 준비하고 링크를 구성하는 방식으로 접근한다. On-sink 유형에서는 OpLock을 활용해 파일 작업의 타이밍을 조절하고 적절한 시점에 링크를 변경하는 과정을 구성한다.
 
-![Pre-sink와 On-sink 및 Code Wrapping 과정](/assets/images/linkzard/linkzard-exploitation.png)
+![Pre-sink와 On-sink 및 Code Wrapping 과정](/assets/images/linkzard-exploitation.png)
 
 결과적으로 LinkZard는 **파일 작업 탐색, 위험한 작업 식별, 악용 조건 분석, 실제 악용 검증**의 과정을 자동화하여 링크 추종 취약점을 탐지하고 검증한다.
 
